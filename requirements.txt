@@ -1,1 +1,5 @@
 cvprac
+tqdm
+paramiko
+scp
+feedparser
