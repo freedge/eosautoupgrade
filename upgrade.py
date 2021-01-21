@@ -92,6 +92,7 @@ else:
         allImages = clnt.api.get_images()
         imageToUse = list(filter(lambda x: x['name'] == targetImage, allImages['data']))
     
+    assert(len(imageToUse) == 1)
     # construct the bundle with the new EOS image, keeping the rest as-is
     images = list(notEOS) + imageToUse
     print ("updating", latestbundle['id'], latestbundle['name'], images, latestbundle['isCertifiedImage'] == "true")
