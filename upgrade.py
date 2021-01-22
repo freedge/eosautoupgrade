@@ -85,7 +85,7 @@ else:
         print("we will use", imageToUse)
     else:
         # upload the image
-        eos_download(targetImage, targetImage, os.env['ARISTA_KEY'])
+        eos_download(targetRelease, targetImage, os.env['ARISTA_KEY'])
         print("uploading new EOS")
         resp = clnt.api.add_image(targetImage)
         # image should be there now
